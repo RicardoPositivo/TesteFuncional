@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=".\APP\CSS\style.css">
+    <title>Positivo - TESTE FUNCIONAL</title>
+
+
+    <script>
+        // Função para bloquear o clique com o botão direito do mouse
+        function bloquearCliqueDireito(event) {
+            event.preventDefault(); // Impede o comportamento padrão do clique com o botão direito
+        }
+    </script>
+
+
+</head>
+
+
+<body>
+    <div id="topo">
+        <header id="header">
+        <img src=".\APP\IMG\logo.png" class="logo">
+        <img src=".\APP\IMG\POSITIVO_TEC_Branca.png" class="positivo">
+    <h1 class="text_inicial">MULTI-TESTE ÁREA TÉCNICA</h1>
+    </header>
+   </div>
+<div id="container" >
+     <H1>Informações:</H1>
+  <section id="inform">
+   <!--TESTE SE O CONECTOR AC ESTA CONECTADO-->
+    <div id="ac_status">
+        <p>Estado do Carregador AC:</p>
+        <p id="status_ac"></p>
+   
+    </div>
+
+   
+    <div id="processor-info">
+        <p>Processador:</p>
+        
+    </div>
+
+    <div id="disk-info">
+        <p>Disco(s):</p>
+    </div>
+
+    <div id="memory-info">
+        <p>Memória:</p>
+    
+    </div>
+
+    <div id="lumina">
+        <p>Por favor, se a máquina for da linha Vision com o Lumina Bar, fazer a verificação manualmente.</p>
+    </div>
+
+
+
+    
+
+    <!-- EXIBIR CONFIGURAÇÕES DA MAQUINA -->
+            <ul id="machine-info">
+                <li><strong>Processador:</strong> <span id="cpu-info"></span></li>
+                <li><strong>Memória Total (MB):</strong> <span id="total-memory"></span></li>
+                <li><strong>Memória Livre (MB):</strong> <span id="free-memory"></span></li>
+                <li><strong>Total de Disco (GB):</strong> <span id="total-disk"></span></li>
+                <li><strong>Disco Livre (GB):</strong> <span id="free-disk"></span></li>
+            </ul>
+            
+            <script>
+                // Fazendo uma solicitação AJAX para obter informações do sistema
+                $.getJSON('/system-info', function(data) {
+                    $('#cpu-info').text(data.cpuInfo);
+                    $('#total-memory').text(data.totalMemory);
+                    $('#free-memory').text(data.freeMemory);
+                    $('#total-disk').text(data.diskInfo.total);
+                    $('#free-disk').text(data.diskInfo.free);
+                });
+            </script>
+            <script src="./APP/JS/informations.js"></script>
+
+
+
+
+</section>  
+</div>
+
+<div id="container_container">
+ <section id="manufacturer">
+    <p>Fabricante:</p>
+ </section>  
+
+ <section id="winkey">
+    
+ </section>  
+
+ <!-- TESTE DE BATERIA -->
+ <section id="Battery">
+    <h1>BATERIA</h1>
+<div id="status"></div>
+<progress id="progressBar" value="0" max="100"></progress>
+</section>
+
+
+    
+   
+
+ <section id="serial">
+    
+ </section>  
+  <!-- TESTE DE WEBCAM -->
+  <section id="webcam">
+    <!-- <h1>WEBCAM</h1> -->
+    <video id="video" autoplay></video>
+   <div class="controls">
+      <button id="captureButton">Iniciar</button>
+    </div> 
+  </section>
+<script src="./APP/JS/webcam.js"></script>
+
+    <!-- TESTE DE MOUSE -->
+    
+    <section id="mouse_test" oncontextmenu="bloquearCliqueDireito(event)">
+      <div id="mouse_box">
+        <H1 id="mouse_line">MOUSE</H1>
+    <div id="container_mouse">
+        <div id="top-left" class="square">
+          <!-- <p></p> -->
+        </div>
+        <div id="top-right" class="square">
+          <!-- <p></p> -->
+        </div>
+        <div id="bottom-left" class="square">
+          <!-- <p></p> -->
+        </div>
+        <div id="bottom-right" class="square">
+          <!-- <p></p> -->
+        </div>
+        <div id="message"></div>
+    </div>
+</div>
+    </section>
+
+
+ <section id="videotest">
+    <div class="video-container">
+        <video id="videoPlayer" width="240" height="120" controls>
+            <source src="./APP/Video/Countdown1.mp4" type="video/mp4" class="video_file">
+            Seu navegador não suporta vídeo WMV.
+        </video>
+    </div>
+ </section>
+
+<section id="audiotest">
+    <div class="audio-container">
+    <audio controls autoplay>
+    <source src="./APP/Audio/LR.wav" type="audio/wav">
+   Your browser does not support the audio element.
+  </audio>
+    </div>
+</section>
+
+
+</div>
+
+<footer id="footer">
+    <p>Este teste pertence à Positivo Tecnologia. A cópia ou a reprodução deste teste não é autorizada.</p>
+</footer>
+
+
+<!-- TESTE CONEXÃO AC -->
+<script src="./APP/JS/ac_test.js"></script>     
+<!-- PROCESSADOR /  -->
+<script src="./APP/JS/processor.js"></script>
+<!-- MEMÓRIA /  -->
+<script src="./APP/JS/memory.js"></script>
+<!-- DISCOS INSTALADOS -->
+<script src="disks.js"></script>
+<!-- MOUSE -->
+<script src="./APP/JS/mouse.js"></script>
+<!-- BATERIA -->
+<script src="./APP/JS/battery.js"></script>
+
+<script>
+    // Combine todas as funções onload em uma única função
+    window.onload = function() {
+        processadorFunction();
+        statusACFunction();
+        memoriaFunction();
+        diskInfo();
+    };
+</script>
+
+</body>
+</html>

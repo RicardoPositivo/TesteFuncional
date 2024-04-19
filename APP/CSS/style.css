@@ -1,0 +1,383 @@
+/* FONTE GOTHAM / RALEWAY */
+/* // <uniquifier>: Use a unique and descriptive class name */
+/* // <weight>: Use a value from 100 to 900 */
+
+.raleway-uniquifier {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 12;
+  font-style: normal;
+}
+
+/* INTRO - INDEX */
+
+body{
+    margin: 0;
+    padding: 0;
+}
+/* CABEÇALHO */
+.positivo{
+    width: 12%;
+    margin-top: 5px;
+    /* box-shadow: 5px 5px 5px 5px #ffffff; */
+}
+
+#topo{
+    background-image: url(../IMG/fundo.jpg);
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    top: -2px;
+    right: -2px;
+    background-color: #ffffff;
+    padding: 10px;
+    /* border: 1px solid #ccc; */
+    width: -webkit-fill-available;
+}
+#header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: center;    
+}
+
+.logo{
+    margin-top: 10px;
+}
+
+.text_inicial{
+    font-family: Raleway;
+    font-size: 12pt;
+    color: white;
+}
+
+
+/* ---------------------- SEÇÃO DE INFORMAÇÕES --------------------------- */
+#container{
+    margin-top: 190px;
+    background-color: rgb(0, 0, 0);
+    /* background-image: url("/APP/IMG/fundo.jpg"); */
+    /* bg-image="./APP/IMG/Fundo.jpg" */
+    color: white;
+    padding: 5px;
+}
+
+#top-left{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#container h1{
+    text-align: center;
+}
+
+
+button :hover{
+    background-color: aqua;
+    font-weight: bold;
+    color: rgb(1, 145, 212);
+}
+
+#inform{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#ac_status, #processor-info, #disk-info, #memory-info, #lumina{
+    /* display: flex; */
+    /* background-color: #00adff2e; */
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 5px;
+    width: 30%;
+    margin-top: 5px;
+}
+
+#ac_status:hover, #processor-info:hover, #disk-info:hover, #memory-info:hover, #lumina:hover{
+    background-color: rgba(255, 255, 255, 0.205);
+    margin-top: 5px;
+    box-shadow: 2px 0px 7px -1px #ffffff;
+
+}
+
+/* STATUS CARREGADOR AC */
+#ac_status{
+    text-align: center;
+    WIDTH: 20VH;
+}
+
+#status_ac.On {
+    color: green;
+}
+
+#status_ac.Off {
+    color: red;
+}
+
+/* PROCESSADOR */
+#processor-info {
+    display: flex;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 20px;
+    text-align: center;
+    width: 20vh;
+    height: 16vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.processor-count{
+    color: green;
+    margin-top: 8px;
+}
+
+#disk-info{
+    display: flex;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 20px;
+    text-align: center;
+    width: 20vh;
+    height: 16vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#memory-info{
+   
+   display: flex;
+   font-family: Arial, sans-serif;
+   font-size: 16px;
+   margin: 20px;
+   text-align: center;
+   width: 20vh;
+   height: 16vh;
+   flex-direction: column;
+   justify-content: center;
+}
+.memory-info-text {
+    color: green; /* Define a cor verde para o texto da memória */
+    margin-top: 5px;
+}
+
+.navigator.deviceMemory{
+    color: green;
+    margin-top: 8px;
+}
+
+#lumina{
+    display: flex;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    margin: 20px;
+    text-align: center;
+    width: 20vh;
+    height: 16vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ----------------------- TESTE FUNCIONAL --------------------------- */
+
+#container_container{
+    background-color: #2d2a29;
+    display: flex;
+    color: #ffffff;
+}
+
+#manufacturer, #Battery, #webcam, #mouse_test {
+    /* display: flex; */
+    /* background-color: #12303fa3; */
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 5px;
+    width: 20vh;
+    height: 20vh;
+    margin-top: 5px;
+}
+#manufacturer:hover, #Battery:hover, #webcam:hover, #mouse_test:hover {
+    background-color: rgb(28 20 20 / 55%);
+    margin-top: 5px;
+    box-shadow: 2px 0px 7px -1px #ffffff;
+}
+
+#manufacturer{
+    display: flex;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 20px;
+    text-align: center;
+    /* width: 20vh;
+    height: 16vh; */
+    flex-direction: column;
+    justify-content: center;
+}
+
+#Battery{
+    display: flex;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 20px;
+    text-align: center;
+    /* width: 20vh;
+    height: 16vh; */
+    flex-direction: column;
+    justify-content: center;
+}
+
+#progressBar {
+    background-color: #f4f4f4; /* cor de fundo */
+    width: 18vh;
+    margin-left: 5px;
+}
+
+#progressBar::-webkit-progress-value {
+    background-color: #4caf50; /* cor do progresso */
+    
+}
+
+#webcam{
+    display: flex;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 20px;
+    text-align: center;
+    /* width: 20vh;
+    height: 16vh; */
+    flex-direction: column;
+    justify-content: center;
+}
+
+#container_mouse{
+    display: flex;
+    flex-direction: row;
+    width: 18vh;
+    /* height: 8vh; */
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: -50px; */
+      
+}
+
+#mouse_test{
+    display: flex;
+    font-size: 16px;
+    margin: 20px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#mouse_box{
+        /* margin-top: -20px; */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-evenly;
+}
+#mouse_line{
+    font-family: 'Raleway';
+    font-size: 2vh;
+    margin: 0px;
+}
+
+.square{
+    display: flex;
+    border: 1px solid #ffffff;
+width: 50px;
+height: 50px;
+}
+
+#videotest{
+    display: flex;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 20px;
+    text-align: center;
+    /* width: 20vh;
+    height: 16vh; */
+    flex-direction: column;
+    justify-content: center;
+}
+.video-container {
+       /* max-width: 60px; */
+       /* margin: 27px -10px 21px -10px; */
+       text-align: center;
+       /* margin-top: 5px; */
+       /* width: 50vh; */
+       /* height: 35vh; */
+       border: 1px solid #ffffff;
+       border-radius: 5px;
+       /* box-shadow: 2px 0px 7px -1px #ffffff; */
+}
+
+#videotest:hover{
+    background-color: rgb(28 20 20 / 55%);
+    margin-top: 5px;
+    box-shadow: 1px 0px 7px -1px #ffffff;
+    border-radius: 5px;
+    height: 21vh;
+}
+
+.video_file{
+    width: 240;
+    height: 120;
+}
+
+#audio-container{
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+#audiotest{
+    display: flex;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 20px;
+    text-align: center;
+    /* width: 20vh;
+    height: 16vh; */
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* #audiotest:hover{ */
+    /* background-color: rgb(28 20 20 / 55%); */
+    /* margin-top: 5px; */
+    /* box-shadow: 1px 0px 7px -1px #ffffff; */
+    /* border-radius: 30px; */
+    /* height: 10vh; */
+/* } */
+
+/* ----------------------- RODAPÉ --------------------------- */
+#footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    padding: -4px;
+    background-color: black;
+    font-family: Raleway;
+}
+
+
+
+/* ----------------------- EFEITOS --------------------------- */

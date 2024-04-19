@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de leitura de arquivo de texto</title>
+</head>
+<body>
+    <h1>Dados do Arquivo de Texto</h1>
+    <input type="file" id="fileInput" accept=".txt">
+
+    <ul id="dados"></ul>
+
+    <script>
+        // Função para processar os dados do arquivo
+        function processarDados(dados) {
+            if (!dados) {
+                console.error("Erro ao carregar o arquivo.");
+                return;
+            }
+            // Divida os dados em linhas
+            var linhas = dados.split('\n');
+            var lista = document.getElementById('dados');
+            // Iterar sobre cada linha e adicionar o segundo e o terceiro resultado de cada linha como um item de lista na página HTML
+            linhas.forEach(function(linha) {
+                var itens = linha.split(',');
+                if (itens.length >= 3) {
+                    var item = document.createElement('li');
+                    item.textContent = itens[1] + ' | ' + itens[2]; // Exibir apenas o segundo e terceiro resultado
+                    lista.appendChild(item);
+                }
+            });
+        }
+
+        // Event listener para quando o arquivo é selecionado
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+
+            reader.onload = function() {
+                var dados = reader.result;
+                processarDados(dados);
+            };
+
+            reader.readAsText(file);
+        });
+    </script>
+</body>
+</html>
+
