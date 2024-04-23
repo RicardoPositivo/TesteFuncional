@@ -193,7 +193,8 @@ button :hover{
     color: #ffffff;
 }
 
-#manufacturer, #Battery, #webcam, #mouse_test {
+#manufacturer, #Battery, #webcam, #mouse_test, #winkey, #serial, #lcd_colors,
+#keyboard, #usb_test, #wlan_test, #battery_percent, #touch, #burnin {
     /* display: flex; */
     /* background-color: #12303fa3; */
     border: 1px solid rgb(255, 255, 255);
@@ -203,7 +204,10 @@ button :hover{
     height: 20vh;
     margin-top: 5px;
 }
-#manufacturer:hover, #Battery:hover, #webcam:hover, #mouse_test:hover {
+#manufacturer:hover, #Battery:hover, #webcam:hover, 
+#mouse_test:hover, #winkey:hover, #serial:hover, #lcd_colors:hover,
+#keyboard:hover, #usb_test:hover, #wlan_test:hover, #battery_percent:hover,
+#touch:hover, #burnin:hover {
     background-color: rgb(28 20 20 / 55%);
     margin-top: 5px;
     box-shadow: 2px 0px 7px -1px #ffffff;
