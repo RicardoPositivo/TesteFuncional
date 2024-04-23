@@ -75,8 +75,8 @@ document.addEventListener("DOMContentLoaded", function() {
     captureButton.addEventListener('click', capturePhoto);
   
     // Eventos para iniciar e parar a captura automática de fotos em intervalos
-    startIntervalCaptureButton.addEventListener('click', startIntervalCapture);
-    stopIntervalCaptureButton.addEventListener('click', stopIntervalCapture);
+    // startIntervalCaptureButton.addEventListener('click', startIntervalCapture);
+    // stopIntervalCaptureButton.addEventListener('click', stopIntervalCapture);
   
     // Listar dispositivos de vídeo ao carregar a página
     getVideoDevices();
